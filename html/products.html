@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smart eCommerce</title>
+    <title>All Products | Smart eCommerce</title>
     <!-- favicon -->
     <link
       rel="shortcut icon"
-      href="assets/images/favicon.svg"
+      href="../assets/images/favicon.svg"
       type="image/x-icon"
     />
     <!-- zmdi icons -->
@@ -17,18 +17,20 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
     />
     <!-- custom css -->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <header>
       <nav>
         <input id="nav-toggle" type="checkbox" />
-        <div class="logo"><img src="assets/images/logo.svg" alt="Logo" /></div>
+        <div class="logo">
+          <img src="../assets/images/logo.svg" alt="Logo" />
+        </div>
         <ul class="links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="/html/products.html">Products</a></li>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/html/product-details.html">Products</a></li>
           <li><a href="#about">About</a></li>
-          <li><a href="/html/add-to-cart.html">Account</a></li>
+          <li><a href="#account">Account</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
         <label for="nav-toggle" class="icon-burger">
@@ -43,55 +45,104 @@
       <i class="zmdi zmdi-shopping-cart"></i>
     </div>
     <div class="zn_mwrap">
-      <div class="zn_section slider">
-        <div class="header_slider">
-          <img src="assets/images/slider1.png" alt="slider1" />
-          <img src="assets/images/slider2.jpg" alt="slider2" />
-          <img src="assets/images/slider3.jpg" alt="slider3" />
-          <img src="assets/images/slider4.png" alt="slider4" />
-          <img src="assets/images/slider5.jpg" alt="slider5" />
+      <!-- SORT PRODUCTS -->
+      <div class="zn_section sort_prods">
+        <h2>All Products</h2>
+        <div class="filter_products">
+          <h3>Filter Products</h3>
+          <select name="sort_prods" id="sort_prods">
+            <option>Sort Products</option>
+            <option value="default">Default</option>
+            <option value="price">Price</option>
+            <option value="iphone">Iphones</option>
+            <option value="headphone">Headphones</option>
+            <option value="popularity">Popularity</option>
+            <option value="sumsung">Sumsung</option>
+            <option value="rating">Rating</option>
+            <option value="sale">Sale</option>
+          </select>
         </div>
       </div>
-      <!-- PHONE CATEGORY SECTION -->
-      <div class="zn_section phone_ctg">
-        <div class="phone_ctg_row">
-          <h2>Products Category</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-            dolores quod. Numquam ipsa eveniet praesentium iste. Ratione
-            distinctio molestias velit praesentium ipsa nihil cupiditate nemo ex
-            provident? Quae rerum mollitia vero sunt magni illo blanditiis nam
-            officiis, numquam enim quia, et id incidunt fugit perspiciatis
-          </p>
-        </div>
-        <div class="phone_ctg_row2">
-          <div class="phone_ctg_ph">
-            <img src="assets/images/product-3.png" alt="Phone" />
-          </div>
-          <div class="phone_ctg_ph">
-            <img src="assets/images/product-4.png" alt="Phone" />
-          </div>
-          <div class="phone_ctg_ph">
-            <img src="assets/images/product-5.png" alt="Phone" />
-          </div>
-        </div>
-        <div class="phone_ctg_row">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas,
-            dolores quod. Numquam ipsa eveniet praesentium iste. Ratione
-            distinctio molestias velit praesentium ipsa nihil cupiditate nemo ex
-            provident? Quae rerum mollitia vero sunt magni illo blanditiis nam
-            officiis, numquam enim quia, et id incidunt fugit perspiciatis
-          </p>
-        </div>
-      </div>
+
       <!-- FEATURED PRODUCTS SECTION -->
       <div class="zn_section featured_prods">
         <div class="featured_prod_row"></div>
         <h2>Featured Products</h2>
         <div class="featured_prod_row2">
           <div class="featured_prod_row2_ph">
-            <img src="assets/images/banner_01.png" alt="Phone" />
+            <img
+              src="../assets/images/products/iPhone/iphone6.jpeg"
+              alt="Phone"
+            />
+            <div class="description">
+              <h4>Iphone</h4>
+              <div class="rating">
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+              </div>
+              <p class="price">GH<span>&#162;</span>489.99</p>
+            </div>
+          </div>
+          <div class="featured_prod_row2_ph">
+            <img
+              src="../assets/images/products/iPhone/iphone5.jpeg"
+              alt="Phone"
+            />
+            <div class="description">
+              <h4>Iphone</h4>
+              <div class="rating">
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+              </div>
+              <p class="price">GH<span>&#162;</span>889.99</p>
+            </div>
+          </div>
+          <div class="featured_prod_row2_ph">
+            <img
+              src="../assets/images/products/iPhone/iphone4.jpeg"
+              alt="Phone"
+            />
+            <div class="description">
+              <h4>Iphone</h4>
+              <div class="rating">
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+              </div>
+              <p class="price">GH<span>&#162;</span>689.99</p>
+            </div>
+          </div>
+          <div class="featured_prod_row2_ph">
+            <img
+              src="../assets/images/products/iPhone/iphone3.jpeg"
+              alt="Phone"
+            />
+            <div class="description">
+              <h4>Iphone</h4>
+              <div class="rating">
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+              </div>
+              <p class="price">GH<span>&#162;</span>289.99</p>
+            </div>
+          </div>
+          <!-- SUMSUNG -->
+          <div class="featured_prod_row2_ph">
+            <img
+              src="../assets/images/products/sumsung/samsung1.jpeg"
+              alt="Phone"
+            />
             <div class="description">
               <h4>Sumsung</h4>
               <div class="rating">
@@ -105,7 +156,10 @@
             </div>
           </div>
           <div class="featured_prod_row2_ph">
-            <img src="assets/images/banner_02.png" alt="Phone" />
+            <img
+              src="../assets/images/products/sumsung/samsung2.jpeg"
+              alt="Phone"
+            />
             <div class="description">
               <h4>Sumsung</h4>
               <div class="rating">
@@ -119,7 +173,10 @@
             </div>
           </div>
           <div class="featured_prod_row2_ph">
-            <img src="assets/images/banner_03.png" alt="Phone" />
+            <img
+              src="../assets/images/products/sumsung/samsung3.jpeg"
+              alt="Phone"
+            />
             <div class="description">
               <h4>Sumsung</h4>
               <div class="rating">
@@ -133,7 +190,10 @@
             </div>
           </div>
           <div class="featured_prod_row2_ph">
-            <img src="assets/images/banner_04.png" alt="Phone" />
+            <img
+              src="../assets/images/products/sumsung/samsung4.jpeg"
+              alt="Phone"
+            />
             <div class="description">
               <h4>Sumsung</h4>
               <div class="rating">
@@ -146,23 +206,10 @@
               <p class="price">GH<span>&#162;</span>289.99</p>
             </div>
           </div>
-        </div>
-        <!-- BRANDS -->
-        <div class="featured_prod_row brands">
-          <img src="assets/images/logo-coca-cola.png" alt="coca-cola" />
-          <img src="assets/images/logo-godrej.png" alt="godrej" />
-          <img src="assets/images/logo-oppo.png" alt="oppo" />
-          <img src="assets/images/logo-paypal.png" alt="paypal" />
-          <img src="assets/images/logo-philips.png" alt="philips" />
-        </div>
-      </div>
-      <!-- LATEST PRODUCTS -->
-      <div class="zn_section latest_prods">
-        <h2>Latest Products</h2>
-        <div class="latest_prod">
-          <div class="latest_prod_item">
+          <!-- headphones -->
+          <div class="featured_prod_row2_ph">
             <img
-              src="assets/images/products/headphone/headphone3.jpeg"
+              src="../assets/images/products/headphone/headphone8.jpeg"
               alt="Phone"
             />
             <div class="description">
@@ -174,13 +221,12 @@
                 <i class="zmdi zmdi-star-outline"></i>
                 <i class="zmdi zmdi-star-outline"></i>
               </div>
-              <p class="price">GH<span>&#162;</span>179.99</p>
+              <p class="price">GH<span>&#162;</span>489.99</p>
             </div>
           </div>
-          <!--  -->
-          <div class="latest_prod_item">
+          <div class="featured_prod_row2_ph">
             <img
-              src="assets/images/products/headphone/headphone1.jpeg"
+              src="../assets/images/products/headphone/headphone9.jpeg"
               alt="Phone"
             />
             <div class="description">
@@ -190,153 +236,63 @@
                 <i class="zmdi zmdi-star"></i>
                 <i class="zmdi zmdi-star"></i>
                 <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+              </div>
+              <p class="price">GH<span>&#162;</span>889.99</p>
+            </div>
+          </div>
+          <div class="featured_prod_row2_ph">
+            <img
+              src="../assets/images/products/headphone/headphone9.jpeg"
+              alt="Phone"
+            />
+            <div class="description">
+              <h4>Sony</h4>
+              <div class="rating">
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+              </div>
+              <p class="price">GH<span>&#162;</span>689.99</p>
+            </div>
+          </div>
+          <div class="featured_prod_row2_ph">
+            <img
+              src="../assets/images/products/headphone/headphone10.jpeg"
+              alt="Phone"
+            />
+            <div class="description">
+              <h4>Sony</h4>
+              <div class="rating">
+                <i class="zmdi zmdi-star"></i>
+                <i class="zmdi zmdi-star-half"></i>
+                <i class="zmdi zmdi-star-outline"></i>
+                <i class="zmdi zmdi-star-outline"></i>
                 <i class="zmdi zmdi-star-outline"></i>
               </div>
               <p class="price">GH<span>&#162;</span>289.99</p>
             </div>
           </div>
-          <div class="latest_prod_item">
-            <img
-              src="assets/images/products/headphone/headphone2.jpeg"
-              alt="Phone"
-            />
-            <div class="description">
-              <h4>Sony</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>189.99</p>
-            </div>
-          </div>
         </div>
-        <div class="latest_prod">
-          <div class="latest_prod_item">
-            <img src="assets/images/products/iPhone/iphone1.jpeg" alt="Phone" />
-            <div class="description">
-              <h4>Iphone</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>4089.99</p>
-            </div>
-          </div>
-          <div class="latest_prod_item">
-            <img src="assets/images/products/iPhone/iphone2.jpeg" alt="Phone" />
-            <div class="description">
-              <h4>Iphone</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>8089.99</p>
-            </div>
-          </div>
-          <div class="latest_prod_item">
-            <img src="assets/images/products/iPhone/iphone3.jpeg" alt="Phone" />
-            <div class="description">
-              <h4>Iphone</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>3089.99</p>
-            </div>
-          </div>
-          <div class="latest_prod_item">
-            <img src="assets/images/products/iPhone/iphone4.jpeg" alt="Phone" />
-            <div class="description">
-              <h4>Iphone</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>2089.99</p>
-            </div>
-          </div>
-        </div>
-        <div class="latest_prod">
-          <div class="latest_prod_item">
-            <img
-              src="assets/images/products/headphone/headphone5.jpeg"
-              alt="Phone"
-            />
-            <div class="description">
-              <h4>Sony</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>179.99</p>
-            </div>
-          </div>
-          <div class="latest_prod_item">
-            <img
-              src="assets/images/products/headphone/headphone6.jpeg"
-              alt="Phone"
-            />
-            <div class="description">
-              <h4>Sony</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>249.99</p>
-            </div>
-          </div>
-          <div class="latest_prod_item">
-            <img
-              src="assets/images/products/headphone/headphone7.jpeg"
-              alt="Phone"
-            />
-            <div class="description">
-              <h4>Sony</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>289.99</p>
-            </div>
-          </div>
-          <!--  -->
+        <!-- Pagination -->
+        <div class="pagination">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>&#8594;</span>
         </div>
       </div>
       <!--  EXCLUSIVE PRODUCTS -->
-      <div class="zn_section">
+      <div class="zn_section exclusive">
         <h2>Exclusive Products</h2>
-        <div class="exclusive_prods">
-          <div class="exclusive_prod">
-            <img
-              src="assets/images/products/headphone/headphone4.jpeg"
-              alt="headphone"
-            />
+        <div class="exclusive_prods_pge">
+          <div class="exclusive_prod_pg">
+            <img src="../assets/images/exclusive.png" alt="headphone" />
           </div>
-          <div class="exclusive_prod desc">
+          <div class="exclusive_prod_pg desc">
             <h3>Exclusive Products at Smart eCom</h3>
             <p>
               Smart eCommerce represent a state of mind where everyone is
@@ -355,14 +311,14 @@
             <h3>Download Our App</h3>
             <p>Get your Copy for Android and IOS Mobile Phones</p>
             <span class="applay">
-              <img src="assets/images/app-store.png" alt="app-store" />
-              <img src="assets/images/play-store.png" alt="play-store" />
+              <img src="../assets/images/app-store.png" alt="app-store" />
+              <img src="../assets/images/play-store.png" alt="play-store" />
             </span>
           </div>
           <div class="footer_row_col logo">
             <h3>Mission and Value</h3>
             <p>Providing quality services for many around the globe</p>
-            <img src="assets/images/logo.svg" alt="logo" />
+            <img src="../assets/images/logo.svg" alt="logo" />
           </div>
           <!-- <div class="footer_row_col">
             <h3>Useful Links</h3>
