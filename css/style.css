@@ -980,7 +980,7 @@ td {
 .my_bag_table_img {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  width: 80%;
+  /* width: 80%; */
 }
 
 .table_img {

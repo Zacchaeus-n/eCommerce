@@ -147,8 +147,8 @@ function handleCartBtnClick(e) {
   const title = document.querySelector(`.ordered_prod_title`).textContent;
   const id = document.querySelector(`.prod_id`).textContent;
   const pprice = document.querySelector(`.new_price`).textContent;
-  const color = document.querySelector(`.product_color`).textContent;
-  const size = document.querySelector(`.product_size`).textContent;
+  const color = document.querySelector(`.product_color_val`).textContent;
+  const size = document.querySelector(`.prod_size_value`).textContent;
   const pqty = document.querySelector(`#prod_order_qty`).value;
   let price = parseInt(pprice);
   let qty = parseInt(pqty);
@@ -291,39 +291,4 @@ const CART = {
       CART.sync();
     }
   },
-
-  remove: (id) => {
-    //remove an item entirely from CART.contents based on its id
-    CART.contents = CART.contents.filter((item) => {
-      if (item.id !== id) {
-        return true;
-      }
-    });
-    //update localStorage
-    CART.sync();
-  },
-  empty: () => {
-    //empty whole cart
-    CART.contents = [];
-    //update localStorage
-    CART.sync();
-  },
-  sort: (field = "title") => {
-    //sort by field - title, price
-    //return a sorted shallow copy of the CART.contents array
-    let sorted = CART.contents.sort((a, b) => {
-      if (a[field] > b[field]) {
-        return 1;
-      } else if (a[field] < a[field]) {
-        return -1;
-      } else {
-        return 0;
-      }
-    });
-    return sorted;
-    //NO impact on localStorage
-  },
-  // logContents:(prefix)=> {
-  //   console.log(prefix, CART.contents);
-  // },
 };
