@@ -238,9 +238,7 @@ nav .icon-burger .line {
 
 .featured_prod_row2_ph {
   flex-basis: calc(calc(25rem-100) * 999);
-  flex-grow: 1;
   margin: 2rem;
-  width: 10%;
   transition: transform 300ms ease-in-out;
 }
 
@@ -250,6 +248,25 @@ nav .icon-burger .line {
 
 .featured_prod_row2_ph img {
   width: 100%;
+}
+
+/* image description */
+
+.description h4 {
+  font-size: 2.3rem;
+  margin: 0.8rem;
+  padding: 0;
+}
+
+.description p {
+  font-size: 1.8rem;
+  margin: 0.8rem;
+  padding: 0;
+}
+
+.description .rating {
+  font-size: 2.1rem;
+  color: coral;
 }
 
 /* BRANDS */
@@ -356,6 +373,18 @@ nav .icon-burger .line {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.featured_prod_row2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.featured_prod_row2_ph img {
+  width: 100%;
 }
 
 /* PAGINATION */
@@ -946,6 +975,17 @@ STYLING FOR THE CART PAGE BEGIN
   font-size: 1.5rem;
 }
 
+#deleteBtn {
+  border: none;
+  background-color: transparent;
+  color: blueviolet;
+}
+
+#deleteBtn:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .my_bag {
   padding: 2rem;
 }
@@ -1385,6 +1425,75 @@ button.amazpal img {
     font-size: 1rem;
   }
 
+  /* STYLING FOR THE PRODUCT DETAILS PAGE */
+  .prod_details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .detail_col.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    flex-wrap: nowrap;
+  }
+
+  .detail_col.left img {
+    width: 10%;
+  }
+
+  .detail_col.middle {
+    width: 90%;
+  }
+
+  .modal__inner {
+    max-width: 40rem;
+    min-width: 30rem;
+    border-radius: 0.4rem;
+    height: 80%;
+    background: white;
+    transform: translateY(200%); /*pushes it up, off the browser*/
+    transition: transform 2s; /*animate the transform property over 2sec*/
+  }
+
+  /* when the outer modal has inner modal do like so */
+  .modal__outer.open .modal__inner {
+    transform: translateY(5%); /* back to original position*/
+  }
+
+  .cart_confirmation_header {
+    width: 92.5%;
+  }
+
+  .cart_confirmation_product {
+    width: 100%;
+  }
+
+  .cart_confirmation_subtotal {
+    width: 90%;
+  }
+
+  .modal__inner .progress_bar {
+    width: 90%;
+  }
+
+  .modal__inner .btn_checkout,
+  .btn_shopping {
+    width: 90%;
+  }
+
+  /* =====================================
+STYLING FOR THE CART PAGE BEGIN
+========================================
+*/
+
+  .wrap_my_bag {
+    display: flex;
+    flex-direction: column;
+  }
+
   .footer_row {
     display: flex;
     flex-direction: row;
@@ -1416,18 +1525,12 @@ button.amazpal img {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* 
-  flex-wrap: wrap;
-  gap: 1rem; */
   }
 
   .phone_ctg_row2 {
     margin: 2.5rem auto;
     display: flex;
     flex-direction: column;
-    /* width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem; */
   }
 
   /* FEATURED PRODUCTS SECTION */
@@ -1435,10 +1538,6 @@ button.amazpal img {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-  overflow-x: hidden; */
   }
 
   /* BRANDS */
@@ -1446,45 +1545,23 @@ button.amazpal img {
   .featured_prod_row.brands {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly;
-  align-items: center;
-  margin: 2.5rem auto;
-  width: 100%;
-  flex-wrap: wrap;
-  overflow: hidden; */
   }
 
   .featured_prod_row.brands img {
     width: 10%;
-    /* cursor: pointer; */
-    /* filter: grayscale(100%); */
   }
 
   /* LATEST PRODUCTS SECTION */
   .latest_prod {
     display: flex;
     flex-direction: column;
-    /* width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-  overflow-x: hidden; */
   }
 
   /* EXCLUSIVE PRODUCTS */
-  /* .zn_section.exclusive {
-  width: 100%;
-} */
 
   .exclusive_prods {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
-    /* align-items: center;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 1rem;
-  overflow-x: hidden;
-  margin-top: 2rem; */
   }
 
   /* STYLING FOR THE PRODUCTS PAGE */
@@ -1495,6 +1572,4 @@ button.amazpal img {
     justify-content: space-evenly;
     align-items: center;
   }
-
-  /* STYLING FOR THE PRODUCTS PAGE */
 }

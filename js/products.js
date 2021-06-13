@@ -7,53 +7,11 @@ $(document).ready(() => {
     dataType: "json",
   }).done((json) => {
     PRODUCTS = json.products;
-    // all products section
-    loadAllProducts(json);
-    // featured products section
-    loadFeaturedProducts(json);
-    // featured products section
-    loadExclusiveProduct(json);
     // filter products section
     filterProduct(json);
   }); //done(end)
   CART.init();
 }); //read(end)
-
-// load all products
-const loadAllProducts = (data) => {
-  let showEachProduct = data.products.map(
-    (product) => `
-      <div class="featured_prod_row2_ph">
-            <img 
-              src="${product.image}"
-              alt="Phone"
-            />
-            <div class="description">
-              <h4>${product.title}</h4>
-              <div class="rating">
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star"></i>
-                <i class="zmdi zmdi-star-half"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-                <i class="zmdi zmdi-star-outline"></i>
-              </div>
-              <p class="price">GH<span>&#162;</span>${product.price}</p>
-            </div>
-          </div>
-  `
-  );
-  // $(".featured_prod_row2").html(showEachProduct);
-};
-
-// load featured products
-const loadFeaturedProducts = (data) => {
-  console.log(data.products[0].size[1]);
-};
-
-// load featured products
-const loadExclusiveProduct = (data) => {
-  console.log(data.products[0].size[1]);
-};
 
 // Filter products
 const filterProduct = (data) => {
@@ -87,7 +45,6 @@ const filterProduct = (data) => {
     );
     $(".featured_prod_row2").html(showCategory);
   });
-  // console.log(data.products[0].size[1]);
 };
 
 /**
@@ -204,7 +161,7 @@ modalInner.querySelector(`.btn_checkout`).addEventListener(`click`, (e) => {
   closeModal();
   window.location.assign("/html/add-to-cart.html");
 });
-/*********************MODAL********************** */
+/*********************MODAL END********************** */
 
 /**
  * ================================
@@ -256,11 +213,9 @@ const CART = {
     }
   },
   add: (prodData) => {
-    console.log(prodData);
     if (CART.find(prodData.id)) {
       CART.contents = CART.contents.map((item) => {
         if (item.id === prodData.id) {
-          // console.log(item);
           let nqty = item.qty + prodData.qty;
           let ntotal = nqty * item.price;
           item.qty = nqty;

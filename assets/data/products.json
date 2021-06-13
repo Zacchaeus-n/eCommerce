@@ -78,7 +78,7 @@
             "title": "Apple iPhone 11",
             "image": "/assets/images/products/iphone/iphone6.jpeg",
             "price": 800,
-            "category": "Trending Products",
+            "category": "Exclusive Products",
             "color":"White",
             "size":"Large"
         },
@@ -141,7 +141,7 @@
             "title": "Sony WH-CH510",
             "image": "/assets/images/products/headphone/headphone9.jpeg",
             "price": 630,
-            "category": "Trending Products",
+            "category": "Exclusive Products",
             "color":"Blue",
             "size":"Medium"
         },

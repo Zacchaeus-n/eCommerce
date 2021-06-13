@@ -1,3 +1,4 @@
+//coupon elements
 const couponBtn = document.querySelector(`.coupon_btn`);
 const couponCode = document.querySelector(`#cpcode`);
 
@@ -55,12 +56,12 @@ const couponUpdates = () => {
   const sumOfOrderTotals = orderTotals.reduce(tallyOrderTotals, 0);
   const orderQuantity = orderQty.reduce(tallyOrderTotals, 0);
   totalOrderQty = orderQuantity; //setting the new quantity
-  console.log(orderQuantity);
+  // updating the UI with new qty
   document.querySelector(`.subtotal_val`).textContent = sumOfOrderTotals;
   document.querySelector(`.estitotal_val`).textContent = sumOfOrderTotals;
 
   orderTotals = sumOfOrderTotals; //setting global orderTotals to sumOfOrderTotals
-  // sproduct.forEach((product) => {
+
   // coupon calculation
   couponCode.addEventListener(`input`, () => {
     if (!(couponCode.value.length > 5 || couponCode.value.length < 5)) {
@@ -86,7 +87,6 @@ const couponUpdates = () => {
       document.querySelector(`.errorMsg`).textContent = `Coupon Code Invalid`;
     }
   });
-  // }); //end forEach
 }; //end couponUpdates()
 
 couponUpdates();
@@ -102,8 +102,6 @@ const populateCartPage = () => {
   let sproduct = getProductFromStorage();
 
   sproduct.forEach((product) => {
-    // console.log(product);
-    // console.log(totalOrderQty);
     document.querySelector(`.summarycount`).textContent = totalOrderQty;
     document.querySelector(`.count`).textContent = totalOrderQty;
     //creating tr for each order
@@ -192,24 +190,21 @@ populateCartPage();
 const deleteBtn = document.getElementById(`deleteBtn`);
 
 deleteBtn.addEventListener(`click`, deleteProduct);
-// console.log(deleteBtn);
 
 // delete product from cart list and local storage
 function deleteProduct(e) {
   let cartItem;
-  // console.log(e.target.tagName);
   if (e.target.tagName === "BUTTON") {
     cartItem = e.target.closest(`tr`);
     cartItem.remove(); // this removes from the DOM only
   }
   let products = getProductFromStorage();
   let updatedProducts = products.filter((product) => {
-    // console.log(typeof product.id);
+    // removing matched order
     return parseInt(product.id) !== parseInt(cartItem.dataset.id);
   });
 
-  // console.log(updatedProducts);
-
+  //  updating the local store
   localStorage.setItem(
     "foundationminiproject",
     JSON.stringify(updatedProducts)
