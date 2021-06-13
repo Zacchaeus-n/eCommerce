@@ -56,57 +56,106 @@
           <img class="prod_detail_large_img" src="../assets/images/products/headphone/headphone2.jpeg" alt="headphone">
         </div>
         <div class="detail_col right">
-          <h3>Sony HD Headphones MP3</h3>
+          <h3 class="ordered_prod_title">Sony HD Headphones MP3</h3>
+          <span class="prod_id" hidden>1</span>
           <div class="rating">
             <i class="zmdi zmdi-star"></i>
             <i class="zmdi zmdi-star"></i>
             <i class="zmdi zmdi-star"></i>
             <i class="zmdi zmdi-star"></i>
             <i class="zmdi zmdi-star-half"></i>
+            <span>135 Reviews</span>
           </div>
-          <p class="free_shipping">FREE GROUND SHIPPING <small>on all oders over </small> GH <span>&#162;</span>1489.99</p>
-          <p class="price"> <span class="new_price">GH<span>&#162;</span>489.99 </span> <span class="old_price">GH<span>&#162;</span>889.99</span> </p>
-          <p class="product_color">Color: Black</p>
-          <div class="product_color_display"></div>
-          <p class="product_size">Size: L  <span class="size_chart">Size Chart</span> </p>
-          <!-- Pagination -->
-          <div class="pagination">
-            <span>S</span>
-            <span>M</span>
-            <span>L</span>
-            <span>2L</span>
+          <p class="free_shipping"><span class="fgs">FREE GROUND SHIPPING</span> <small>on all oders over </small> GH <span>&#162;</span>1489.99</p>
+          <p class="price"> <span class="cedi">GH<span class="cedi">&#162;</span><span class="new_price">489.99 </span></span> <span class="old_price">GH<span>&#162;</span>889.99</span> </p>
+          <p class="prod_color">Color: <span class="product_color_val">Black</span></p>
+          <div class="product_color_display">
+            <div class="prod_ccolor fc" data-color="Blueviolet"></div>
+            <div class="prod_ccolor sc" data-color="Tomato"></div>
+            <div class="prod_ccolor tc" data-color="Blue"></div>
+            <div class="prod_ccolor ffc" data-color="Greenyellow"></div>
+            <div class="prod_ccolor fffc" data-color="Black"></div>
+            <div class="prod_ccolor ssc" data-color="White"></div>
           </div>
-          <div class="pagination">
-            <span>S</span>
-            <span>M</span>
-            <span>L</span>
-            <span>2L</span>
-          </div>
-          <div class="pagination">
-            <span>S</span>
-            <span>M</span>
+          <p class="product_size">Size: <span class="prod_size_value">L</span>  <span class="size_chart">Size Chart</span> </p>
+          <!-- size_selection -->
+          <div class="size_selection">
+            <span data-size="2T">2T</span>
+            <span data-size="3T">3T</span>
+            <span data-size="4T">4T</span>
+            <span data-size="5">5</span>
+            <span data-size="6">6</span>
+            <span data-size="7">7</span>
+            <span data-size="S">S</span>
+            <span data-size="M">M</span>
+            <span data-size="L">L</span>
+            <span data-size="XL">XL</span>
           </div>
           <p class="product_color">In Stock</p>
-          <div class="pagination">
-            <span>+</span>
-            <span>0</span>
-            <span>-</span>
+          <div class="update_prod">
+            <button class="decrement" data-id="1">-</button>
+            <input type="number" name="prod_order_qty" id="prod_order_qty" value=1>
+            <button class="increment" data-id="1">+</button>
           </div>
-          <button>ADD TO CART</button>
+          <button class="btn_addToBag" data-id="1" >ADD TO BAG</button>
           <div class="free_in_store">
-            <h5>Buy online, free in-store pickup</h5>
-            <p>Get it today at a store near you. <a href="#" target="_blank" rel="noopener noreferrer">Choose store</a> </p>
+            <span class="online">Buy online, free in-store pickup</span> <br>
+            <span class="near">Get it today at a store near you. <a href="#" target="_blank" rel="noopener noreferrer">Choose store</a> </span>
           </div>
           <div class="delivery">
-            <span></span>
-            <p>Same Day Delivery - <a href="#" target="_blank" rel="noopener noreferrer">Check Availability</a></p>
-            <div>Paypal section</div>
-            <p><span class="gifts">Gifts Options</span><span class="wishlist">Add to Whishlist</span></p>
+            <span><img class="sameday" src="../assets/images/same-day.PNG" alt="same day delivery"></span>
+            <span class="sameday_delivery">Same Day Delivery - <a href="#">Check Availability</a></span>
+            <div class="payment_mode">
+              <img class="pay_pp" src="../assets/images/pay-paypal.png" alt="pay-paypal">
+              <img class="pay_pa" src="../assets/images/pay-amazon.png" alt="pay-amazon">
+              <img class="pay_ap" src="../assets/images/pay-applepay.png" alt="pay-applepay">
+            </div>
+            <p class="afterpay">or 4 payments of GH<span>&#162;</span>489.63 by <img src="../assets/images/afterpay.svg" alt="afterpay"> ?</p>
+            <p class="pgifts"><span class="gifts"><img src="../assets/images/gift.svg" alt="gift"> Gifts Options</span><span class="wishlist"><i class="zmdi zmdi-favorite-outline"></i>Add to Whishlist</span></p>
 
           </div>
+         
         </div>
       </div>
-
+ <!-- MODAL -->
+    <div class="modal__outer">
+        <div class="modal__inner">
+            <!-- oddered product to slide in -->
+          <div class="ordered_slide">
+            <div class="cart_confirmation_header">
+                <h6 class="cart_confirmation_title">Item added to Cart</h6>
+                <button class="dialog_drawer_close" title="Close" data-close="" role="button">X</button>
+              </div>
+            <div class="cart_confirmation_product">
+              <div class="cart_confirmation_product_img">
+                <img src="../assets/images/product-3.png" alt="" title="" class="cart_confirmation_productimg">
+              </div>
+              <div class="cart_confirmation_product_info">
+                <h3 class="cart_item_name">Gold Star Hoop Earrings</h3>
+                <p class="prod_price">GH<span>&#162;</span><span class="prod_price_value">48.00</span></p>
+                <p><span class="prod_color">Gold/</span><span class="prod_size">1SZ</span></p>
+                <div class="group-section-c">
+                  <p>Qty: <span class="cart_item_qty">00</span></p>
+                  <p class="cart_item_price">
+                    <span class="prod_subtotal">GH<span>&#162;</span><span class="prod_subtotal_value">0.00</span></span>
+                  </p>
+                </div>
+              </div>
+            </div>            
+            <div class="cart_confirmation_subtotal">
+              <h6 class="cart_confirmation_subtotal_hed">Cart Subtotal:</h6>
+              <p class="cart_confirmation_subtotal_price">GH<span>&#162;</span><span class="total_price">0.00</span></p>
+            </div>
+            <div class="progress_bar">
+              <div class="progress_bar_inner"></div>
+            </div>
+            <p class="you_qualify">You qualify for FREE SHIPPING</p>
+            <button class="btn_checkout" data-id="1" >CHECKOUT</button>
+            <a href="products.html"  class="btn_shopping" data-id="1">CONTINUE SHOPPING</a>
+          </div>
+        </div>
+    </div>
+    <!-- MODAL -->
       <!-- FEATURED PRODUCTS SECTION -->
       <div class="zn_section featured_prods">
         <div class="featured_prod_row"></div>
@@ -245,6 +294,9 @@
       crossorigin="anonymous"
     ></script>
     <!-- custom js -->
+    <script src="../js/products.js"></script>
     <script src="../js/script.js"></script>
   </body>
 </html>
+
+

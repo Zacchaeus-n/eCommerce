@@ -51,15 +51,12 @@
         <div class="filter_products">
           <h3>Filter Products</h3>
           <select name="sort_prods" id="sort_prods">
-            <option>Sort Products</option>
-            <option value="default">Default</option>
-            <option value="price">Price</option>
-            <option value="iphone">Iphones</option>
-            <option value="headphone">Headphones</option>
-            <option value="popularity">Popularity</option>
-            <option value="sumsung">Sumsung</option>
-            <option value="rating">Rating</option>
-            <option value="sale">Sale</option>
+            <option disabled>--- Sort Products ---</option>
+            <option value="All" selected>All Products</option>
+            <option value="Trending">Trending Products</option>
+            <option value="Special">Special Products</option>
+            <option value="Featured">Featured Products</option>
+            <option value="Exclusive">Exclusive Products</option>
           </select>
         </div>
       </div>
@@ -69,7 +66,7 @@
         <div class="featured_prod_row"></div>
         <h2>Featured Products</h2>
         <div class="featured_prod_row2">
-          <div class="featured_prod_row2_ph">
+          <!-- <div class="featured_prod_row2_ph">
             <img
               src="../assets/images/products/iPhone/iphone6.jpeg"
               alt="Phone"
@@ -137,7 +134,7 @@
               <p class="price">GH<span>&#162;</span>289.99</p>
             </div>
           </div>
-          <!-- SUMSUNG -->
+          -- SUMSUNG 
           <div class="featured_prod_row2_ph">
             <img
               src="../assets/images/products/sumsung/samsung1.jpeg"
@@ -206,7 +203,7 @@
               <p class="price">GH<span>&#162;</span>289.99</p>
             </div>
           </div>
-          <!-- headphones -->
+          -- headphones
           <div class="featured_prod_row2_ph">
             <img
               src="../assets/images/products/headphone/headphone8.jpeg"
@@ -275,7 +272,7 @@
               <p class="price">GH<span>&#162;</span>289.99</p>
             </div>
           </div>
-        </div>
+        </div> -->
         <!-- Pagination -->
         <div class="pagination">
           <span>1</span>
@@ -348,7 +345,8 @@
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
     <!-- custom js -->
-    <script src="js/script.js"></script>
+    <script src="../js/products.js"></script>
   </body>
 </html>

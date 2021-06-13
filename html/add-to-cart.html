@@ -47,12 +47,35 @@
     <div class="zn_mwrap">
       <!-- MY BAG -->
       <div class="wrap_my_bag">
-        <div class="my_bag_title">MY BAG</div>
+        <div class="my_bag_title">
+          <div class="my_bag_title_col mbtitle">
+            <h3>MY BAG</h3>
+            <div class="count">0</div>
+          </div>
+          <div class="my_bag_title_col progress">
+            <div class="progress_bar">
+              <div class="progress_bar_inner"></div>
+            </div>
+            <p class="free_ship">
+              <span>Add GH<span>&#162;</span>4089.99</span> to qualify for FREE
+              SHIPPING!
+            </p>
+            <p class="instore">
+              <span class="is_pickup">In-store pickup</span> is
+              <span class="is_pickup">Always free</span>
+            </p>
+          </div>
+          <div class="my_bag_title_row">
+            <h5>
+              <i class="zmdi zmdi-shopping-cart"></i>NEW! SAME DAY DELIVERY!
+            </h5>
+            <a href="" target="_blank" rel="noopener noreferrer">
+              - Check availability</a
+            >
+          </div>
+        </div>
         <div class="my_bag">
-          <table border="1">
-            <caption>
-              MY BAG
-            </caption>
+          <table>
             <thead>
               <tr>
                 <th>ITEM</th>
@@ -63,10 +86,79 @@
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="my_bag_table_img">
+                  <div class="table_img">
+                    <a href="product-details.html">
+                      <img
+                        class="oprod_img"
+                        src="../assets/images/products/headphone/headphone1.jpeg"
+                        alt="headphone"
+                      />
+                    </a>
+                  </div>
+                  <div class="table_img_desc">
+                    <a
+                      class="oprod_title"
+                      href="product-details.html"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      >Smart Headphone latest</a
+                    >
+                    <span class="oprod_id" hidden></span>
+                    <div class="img_color_size">
+                      <a href="" class="dcolor">Color: <span>Black</span></a> |
+                      <a href="" class="dsize">Size: <span>Large</span></a>
+                    </div>
+                    <div class="img_modify_links">
+                      <a href="product-details.html">Edit</a> |
+                      <a href="">Move to Wishlist</a> |
+                      <a href="">Remove</a>
+                    </div>
+                  </div>
+                </td>
+                <td class="td_wrap_qty">
+                  <div class="wrap_qty">
+                    <div class="wrap_qty option">
+                      <select class="qty_control" id="myqty">
+                        <option selected>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                      </select>
+                    </div>
+                    <div class="wrap_qty priceqty">
+                      <p class="unit_price">UNIT PRICE</p>
+                      <p class="unit_pvalue">
+                        &#64; GH<span>&#162;</span>
+                        <span class="unit_price_val">0.00</span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="wrap_qty mygift">
+                    <input type="checkbox" name="mygift" id="mygift" />
+                    <label for="mygift">Free gift package?</label>
+                  </div>
+                </td>
+                <td class="my_deli_mode">
+                  <input type="radio" name="delivery" id="del_ship" /> Ship to
+                  Me <br />
+                  <input type="radio" name="delivery" id="del_instore" />
+                  In-Store Pickup <br />
+                  <input type="radio" name="delivery" id="del_curbside" />
+                  Curbside Pickup
+                </td>
+                <td>
+                  <p>
+                    GH<span>&#162;</span
+                    ><span class="total_price_val">0.00</span>
+                  </p>
+                </td>
               </tr>
             </tbody>
             <tfoot>
@@ -78,25 +170,83 @@
                     or Express checkout. Same Day Delivery is not available for
                     Paypal, AmazonPay, In-Store, or Curbside checkout.
                   </p>
-                </td>
-              </tr>
-              <tr>
-                <td colspan="4">
                   <details>
-                    <summary>Whishlist <span>0</span></summary>
-                    <h5>Your wishlist bag is empty.</h5>
-                    <p>
-                      To add items to your wishlist, click the "Wishlist" button
-                      from a product page, or move items from your cart.
-                    </p>
-                    <p>Don't see all your wishlist items? Please sign in.</p>
+                    <summary>Wishlist <span>0</span></summary>
+                    <div>
+                      <h5>Your wishlist bag is empty.</h5>
+                      <p>
+                        To add items to your wishlist, click the "Wishlist"
+                        button from a product page, or move items from your
+                        cart.
+                      </p>
+                      <p>Don't see all your wishlist items? Please sign in.</p>
+                    </div>
                   </details>
                 </td>
               </tr>
             </tfoot>
           </table>
         </div>
-        <div class="cart_right">Cart Right</div>
+        <div class="cart_right">
+          <div class="inner">
+            <div class="order_summary_h">
+              <div class="inner_border">
+                <h6>Order summary</h6>
+                <p class="summary_count">
+                  <span class="summarycount">0</span> item(s)
+                </p>
+              </div>
+            </div>
+            <div class="order_summary_b">
+              <h6 class="subtotal">
+                <span>Subtotal</span>
+                <span
+                  >GH<span>&#162;</span>
+                  <span class="subtotal_val">0.00</span>
+                </span>
+              </h6>
+              <h6 class="sales_tax">
+                <span>Sales Tax</span>
+                <span
+                  >GH<span>&#162;</span>
+                  <span class="tax_val">0.00</span>
+                </span>
+              </h6>
+              <h6 class="estimated_total">
+                <span>ESTIMATED TOTAL*</span>
+                <span
+                  >GH<span>&#162;</span>
+                  <span class="estitotal_val">0.00</span>
+                </span>
+              </h6>
+              <p class="os_afterpay">
+                or 4 payments of GH<span>&#162;</span>489.63 by
+                <img src="../assets/images/afterpay.svg" alt="afterpay" /> ?
+              </p>
+            </div>
+            <div class="order_summary_form">
+              <form class="coupon_code" action="">
+                <span class="errorMsg"></span>
+                <input
+                  type="text"
+                  name="cpcode"
+                  id="cpcode"
+                  placeholder="Enter promo code"
+                  required
+                />
+                <button class="coupon_btn">Apply</button>
+              </form>
+              <button class="checkout"><div>CHECKOUT</div></button>
+              <p class="orpaywith">Or pay with:</p>
+              <button class="paypal_checkout amazpal">
+                <img src="../assets/images/pay-paypal.png" alt="Paypal" />
+              </button>
+              <button class="amazon_checkout amazpal">
+                <img src="../assets/images/pay-amazon.png" alt="AmazonPay" />
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <!-- FOOTER SECTION -->
       <div class="zn_section footer">
@@ -143,6 +293,6 @@
       crossorigin="anonymous"
     ></script>
     <!-- custom js -->
-    <script src="js/script.js"></script>
+    <script src="../js/script.js"></script>
   </body>
 </html>
